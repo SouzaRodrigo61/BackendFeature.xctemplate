@@ -14,6 +14,10 @@ extension UseCase where Context == ___VARIABLE_productName___ {
     static let findById = Self { request in
         return <#Prepare return of the use case#>
     }
+
+    static let delete = Self { request in
+        return <#Prepare return of the use case#>
+    }
     
 }
 
