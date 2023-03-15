@@ -15,3 +15,7 @@ struct Create___FILEBASENAME___: AsyncMigration {
     }
     
 }
+
+public func ___VARIABLE_productName___Migrate(migrate: Migrations) {
+    migrate.add(Create___FILEBASENAME___())
+}
