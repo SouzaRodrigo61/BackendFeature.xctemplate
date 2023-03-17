@@ -18,28 +18,70 @@ struct ___FILEBASENAME___: RouteCollection {
         router.delete(use: delete)
     }
 
-    func index(req: Request) async throws -> [Game] {
-        return await execute(of: req, with: .list)
+    func index(req: Request) async throws -> [___VARIABLE_productName___] {
+        let result = await execute(of: req, with: .list___VARIABLE_productName___)
+        
+        switch result {
+        case .success(let data):
+            return data
+        default:
+            throw Abort(.badRequest)
+        }
     }
     
-    func findMany(req: Request) async throws -> [Game] {
-        return await execute(of: req, with: .findMany)
+    func findMany(req: Request) async throws -> [___VARIABLE_productName___] {
+        let result = await execute(of: req, with: .findMany___VARIABLE_productName___)
+       
+        switch result {
+        case .success(let data):
+            return data
+        default:
+            throw Abort(.badRequest)
+        }
     }
     
-    func findById(req: Request) async throws -> Game {
-        return await execute(of: req, with: .findById)
+    func findById(req: Request) async throws -> ___VARIABLE_productName___ {
+        let result = await execute(of: req, with: .findById___VARIABLE_productName___)
+            
+        switch result {
+        case .success(let data):
+            return data
+        default:
+            throw Abort(.badRequest)
+        }
     }
     
-    func create(req: Request) async throws -> Game {
-        return await execute(of: req, with: .create)
+    func create(req: Request) async throws -> ___VARIABLE_productName___ {
+        let result = await execute(of: req, with: .create___VARIABLE_productName___)
+        
+        switch result {
+        case .success(let data):
+            return data
+        default:
+            throw Abort(.badRequest)
+        }
     }
     
-    func update(req: Request) async throws -> Game {
-        return await execute(of: req, with: .update)
+    func update(req: Request) async throws -> ___VARIABLE_productName___ {
+        let result = await execute(of: req, with: .update___VARIABLE_productName___)
+        
+        switch result {
+        case .success(let data):
+            return data
+        default:
+            throw Abort(.badRequest)
+        }
     }
     
-    func delete(req: Request) async throws -> Game {
-        return await execute(of: req, with: .delete)
+    func delete(req: Request) async throws -> ___VARIABLE_productName___ {
+        let result = await execute(of: req, with: .delete___VARIABLE_productName___)
+        
+        switch result {
+        case .success(let data):
+            return data
+        default:
+            throw Abort(.badRequest)
+        }
     }
     
 }
